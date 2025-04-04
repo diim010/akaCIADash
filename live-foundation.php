@@ -110,6 +110,7 @@ class Live_Foundation {
         require_once LIVE_FOUNDATION_PLUGIN_DIR . 'includes/class-live-foundation-shortcodes.php';
         require_once LIVE_FOUNDATION_PLUGIN_DIR . 'includes/class-live-foundation-scripts.php';
         require_once LIVE_FOUNDATION_PLUGIN_DIR . 'includes/class-live-foundation-api.php';
+        require_once LIVE_FOUNDATION_PLUGIN_DIR . 'includes/class-live-foundation-cocktail-frontend.php';
 
 
         require_once LIVE_FOUNDATION_PLUGIN_DIR . 'includes/post-types/class-ingredient-post-type.php';
