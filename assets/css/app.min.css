@@ -1,0 +1,4 @@
+.live-foundation-cocktails {
+  display: grid;
+  grid-template-columns: 100px 400px auto;
+}
