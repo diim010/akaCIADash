@@ -1,4 +1,6 @@
 {
+    "/assets/css/cocktails.css": "/assets/css/cocktails.css",
     "/assets/css/app.css": "/assets/css/app.css",
-    "/assets/css/app.min.css": "/assets/css/app.min.css"
+    "/assets/css/app.min.css": "/assets/css/app.min.css",
+    "/assets/css/cocktails.min.css": "/assets/css/cocktails.min.css"
 }
