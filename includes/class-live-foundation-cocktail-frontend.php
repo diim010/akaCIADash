@@ -135,19 +135,16 @@ class Live_Foundation_Cocktail_Frontend {
                 <button id="apply-filters" class="button"><?php _e('Apply Filters', 'live-foundation'); ?></button>
             </div>
             
-            <div id="cocktail-grid" class="cocktail-grid" data-total="0" data-page="1" data-limit="<?php echo esc_attr($atts['limit']); ?>">
+            <div id="cocktail-grid" class="cocktails__list" data-total="0" data-page="1" data-limit="<?php echo esc_attr($atts['limit']); ?>">
                 <div class="cocktail-loading">
                     <div class="spinner"></div>
                     <p><?php _e('Loading cocktails...', 'live-foundation'); ?></p>
                 </div>
+                <div class="cocktail-load-more">
+                 <button id="load-more-cocktails" class="button" style="display: none;"><?php _e('Load More', 'live-foundation'); ?></button>
+                 </div>
             </div>
-            
-            <div class="cocktail-load-more">
-                <button id="load-more-cocktails" class="button" style="display: none;"><?php _e('Load More', 'live-foundation'); ?></button>
-            </div>
-            
-            <!-- Cocktail modal for details -->
-            <div id="cocktail-modal" class="cocktail-modal">
+            <div id="cocktail-modal" class="cocktail__info">
                 <div class="cocktail-modal-content">
                     <span class="close-modal">&times;</span>
                     <div id="cocktail-modal-body"></div>
@@ -367,15 +364,15 @@ class Live_Foundation_Cocktail_Frontend {
         ob_start();
         
         ?>
-        <div class="cocktail-card" data-id="<?php echo esc_attr($cocktail['id']); ?>">
-            <div class="cocktail-image">
+        <div class="cocktail__card" data-id="<?php echo esc_attr($cocktail['id']); ?>">
+            <div class="cocktail__card-image">
                 <?php if (!empty($cocktail['image'])) : ?>
                     <img src="<?php echo esc_url($cocktail['image']); ?>" alt="<?php echo esc_attr($cocktail['title']); ?>">
                 <?php else : ?>
                     <div class="no-image"></div>
                 <?php endif; ?>
             </div>
-            <div class="cocktail-details">
+            <div class="cocktail__card-details">
                 <h3 class="cocktail-title"><?php echo esc_html($cocktail['title']); ?></h3>
                 <div class="cocktail-meta">
                     <?php if (!empty($cocktail['meta']['prep_time'])) : ?>
